@@ -38,6 +38,8 @@ WHERE sale_date IS NULL
 SELECT * FROM retail_sales 
 WHERE sale_time IS NULL
 
+-- DATA CLEANING
+
 -- Check null values for all categories in one line
 SELECT * FROM retail_sales 
 WHERE 
@@ -76,3 +78,16 @@ WHERE
 	cogs IS NULL
 	OR
 	total_sale IS NULL;
+
+-- DATA EXPLORATION
+
+-- Check for total # of sales
+SELECT COUNT(*) as total_sale FROM retail_sales
+
+-- Check for total # of unique customers
+SELECT COUNT(DISTINCT customer_id) as total_sale FROM retail_sales
+
+
+SELECT DISTINCT category FROM retail_sales
+
+-- DATA Analysis
